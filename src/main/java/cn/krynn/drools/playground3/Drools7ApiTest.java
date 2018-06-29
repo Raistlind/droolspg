@@ -1,24 +1,21 @@
 package cn.krynn.drools.playground3;
 
+import cn.krynn.drools.BaseTest;
 import cn.krynn.drools.model.Car;
 import cn.krynn.drools.model.Person;
 import org.junit.Test;
-import org.kie.api.KieServices;
-import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 
 /**
  * Created by RaistlinD
  * 2018/6/28 下午11:49
  */
-public class Drools7ApiTest {
+public class Drools7ApiTest extends BaseTest {
 
     @Test
     public void testDrools7Api() {
 
-        KieServices kieService = KieServices.get();
-        KieContainer kieContainer = kieService.getKieClasspathContainer();
-        KieSession kieSession = kieContainer.newKieSession("all-rules");
+        KieSession kieSession = getKieSession("test-gdrools7");
 
         Person p1 = new Person();
         p1.setAge(30);

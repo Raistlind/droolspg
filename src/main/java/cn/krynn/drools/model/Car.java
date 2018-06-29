@@ -6,7 +6,7 @@ package cn.krynn.drools.model;
  */
 public class Car {
 
-    private int discount;
+    private int discount = 100;
 
     private Person person;
 
