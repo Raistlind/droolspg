@@ -1,0 +1,11 @@
+package stateless
+
+import cn.krynn.drools.model.Person
+
+rule "test-stateless"
+
+when
+    $p : Person()
+then
+     System.out.println($p.getAge());
+end
